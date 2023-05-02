@@ -13,6 +13,3 @@ brew install jat001/homebrew-ox/<formula>
 ```
 
 ## Apps
-
-- Sublime Text 4 Dev (sublime-text-dev)
-- Sublime Merge Dev (sublime-merge-dev)
