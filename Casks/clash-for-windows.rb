@@ -17,7 +17,7 @@ cask 'clash-for-windows' do
   end
 
   name 'Clash for Windows'
-  desc 'GUI based on Clash'
+  desc 'A cross-platform GUI based on Clash.'
   homepage 'https://web.archive.org/web/20231030023332/https://github.com/Fndroid/clash_for_windows_pkg'
 
   # livecheck do

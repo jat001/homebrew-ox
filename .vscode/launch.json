@@ -1,0 +1,11 @@
+{
+  "configurations": [
+    {
+      "name": "Debug current file",
+      "request": "launch",
+      "script": "${file}",
+      "type": "rdbg"
+    }
+  ],
+  "version": "0.2.0"
+}

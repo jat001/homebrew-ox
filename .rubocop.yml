@@ -1,5 +1,17 @@
+require:
+  - rubocop-sorbet
+
 Naming/FileName:
-  Enabled: false
+  Exclude:
+    - "Casks/*"
 
 Style/FrozenStringLiteralComment:
-  Enabled: false
+  Exclude:
+    - "Casks/*"
+
+Sorbet/FalseSigil:
+  Exclude:
+    - "Casks/*"
+
+Metrics/MethodLength:
+  Max: 20
