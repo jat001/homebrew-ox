@@ -85,10 +85,10 @@ file = File.open(File.join(root, 'README.md'), 'r+')
 orig = file.read
 
 search = Regexp.escape(search)
-orig.gsub!(/#{search}.*#{search}/m, text)
+text = orig.gsub(/#{search}.*#{search}/m, text)
 
 file.seek(0)
-file.write(orig)
+file.write(text)
 file.close
 
 push or exit
