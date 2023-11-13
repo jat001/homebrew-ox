@@ -92,6 +92,7 @@ file.write(text)
 file.close
 
 push or exit
+system("git -C '#{root}' diff --quiet README.md") and exit
 
 git = ->(arg) { system("git -C '#{root}' #{arg}") or exit(1) }
 git.call('add README.md')
