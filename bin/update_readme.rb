@@ -30,7 +30,7 @@ class Cask
 
   sig { params(method: Symbol, args: T.untyped).void }
   def method_missing(method, *args)
-    @attrs.key?(method) or return
+    @attrs.key?(method) and !args.empty? or return
 
     @attrs[method] = T.let(args[0], String)
   end
