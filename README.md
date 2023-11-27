@@ -1,14 +1,14 @@
-# 🐂 Ox
+# 🍺 Homebrew Ox 🐂
 
 > The [Ox](https://en.wikipedia.org/wiki/Ox_(zodiac)) (牛) is the second of the 12-year periodic sequence (cycle) of animals which appear in the Chinese zodiac related to the Chinese calendar, and also appears in related calendar systems.
 
 ## Usage
 
 ```bash
-brew tap jat001/homebrew-ox
-brew install <formula>
+brew tap jat001/ox
+brew install <formula|cask>
 # or
-brew install jat001/homebrew-ox/<formula>
+brew install jat001/homebrew-ox/<formula|cask>
 ```
 
 ## Apps
