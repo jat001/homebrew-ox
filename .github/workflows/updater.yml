@@ -12,15 +12,16 @@ jobs:
     steps:
       - name: Tap repo
         run: |
-          brew update
+          brew update --quiet
           brew tap jat001/ox
-          cd "$(brew --repo jat001/ox)"
 
       - name: Update version
         run: |
+          cd "$(brew --repo jat001/ox)"
           ./bin/update_version.sh --push
 
       - name: Update readme
         run: |
+          cd "$(brew --repo jat001/ox)"
           bundle install
           ./bin/update_readme.rb --push
