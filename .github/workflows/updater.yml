@@ -22,6 +22,12 @@ jobs:
         run: |
           mkdir -p /usr/local/Homebrew/Library/Taps/jat001
           mv "$GITHUB_WORKSPACE" /usr/local/Homebrew/Library/Taps/jat001/homebrew-ox
+          ln -s /usr/local/Homebrew/Library/Taps/jat001/homebrew-ox "$GITHUB_WORKSPACE"
+
+          echo 'tree /usr/local/Homebrew/Library/Taps/jat001'
+          tree /usr/local/Homebrew/Library/Taps/jat001
+          echo "tree $GITHUB_WORKSPACE"
+          tree "$GITHUB_WORKSPACE"
 
       - name: Update version
         run: |
