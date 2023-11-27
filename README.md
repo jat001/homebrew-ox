@@ -24,4 +24,3 @@ Name | Description | Version
 For Windows users, see [scoop-ox](https://github.com/jat001/scoop-ox).
 
 For Arch Linux users, I also maintain some packages in [AUR](https://aur.archlinux.org/packages?SeB=m&K=Jat).
-.

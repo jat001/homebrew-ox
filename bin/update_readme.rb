@@ -87,6 +87,7 @@ text = orig.gsub(/#{search}.*#{search}/m, text)
 
 file.seek(0)
 file.write(text)
+file.truncate(file.pos)
 file.close
 
 push or exit
