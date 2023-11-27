@@ -10,10 +10,18 @@ jobs:
     name: Update
     runs-on: macos-latest
     steps:
-      - name: Tap repo
+      - name: Update Homebrew
         run: |
           brew update --quiet
-          brew tap jat001/ox
+          brew install coreutils
+
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Move repo
+        run: |
+          mkdir -p /usr/local/Homebrew/Library/Taps/jat001
+          mv "$GITHUB_WORKSPACE" /usr/local/Homebrew/Library/Taps/jat001/homebrew-ox
 
       - name: Update version
         run: |
