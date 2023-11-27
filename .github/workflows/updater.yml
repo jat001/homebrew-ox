@@ -15,6 +15,11 @@ jobs:
           brew update --quiet
           brew install coreutils
 
+      - name: Setup git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
       - name: Checkout repo
         uses: actions/checkout@v4
 
