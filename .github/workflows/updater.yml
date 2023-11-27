@@ -1,0 +1,26 @@
+name: Updater
+on:
+  workflow_dispatch:
+  schedule:
+    # run every 4 hours
+    - cron: '20 */4 * * *'
+
+jobs:
+  update:
+    name: Update
+    runs-on: macos-latest
+    steps:
+      - name: Tap repo
+        run: |
+          brew update
+          brew tap jat001/ox
+          cd "$(brew --repo jat001/ox)"
+
+      - name: Update version
+        run: |
+          ./bin/update_version.sh --push
+
+      - name: Update readme
+        run: |
+          bundle install
+          ./bin/update_readme.rb --push

@@ -21,7 +21,7 @@ class Cask
         name: '',
         desc: '',
         homepage: '',
-        version: ''
+        version: '',
       },
       T::Hash[Symbol, String]
     )
