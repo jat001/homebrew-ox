@@ -4,7 +4,7 @@ cask 'obs-multi-rtmp' do
 
   url "https://github.com/sorayuki/obs-multi-rtmp/releases/download/#{version}/obs-multi-rtmp-#{version}-macos-universal.pkg"
   name 'obs-multi-rtmp'
-  desc 'Multiple RTMP outputs plugin'
+  desc 'Multiple RTMP outputs plugin for OBS Studio'
   homepage 'https://github.com/sorayuki/obs-multi-rtmp'
 
   livecheck do
