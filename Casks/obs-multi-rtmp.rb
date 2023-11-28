@@ -15,6 +15,6 @@ cask "obs-multi-rtmp" do
   pkg "obs-multi-rtmp-#{version}-macos-universal.pkg"
 
   uninstall pkgutil: [
-    "com.sorayuki.obs-multi-rtmp",
+    "'net.sorayuki.obs-multi-rtmp'",
   ]
 end
