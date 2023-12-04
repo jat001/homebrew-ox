@@ -39,6 +39,8 @@ for type in cask formula; do
 
         brew bump-$type-pr --write-only --commit --version "$version" "jat001/ox/$name"
     done
+
+    break
 done
 
 [ "$PUSH" -gt 0 ] && git push origin master
