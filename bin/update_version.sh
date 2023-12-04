@@ -29,14 +29,16 @@ while :; do
     shift
 done
 
-brew livecheck --tap jat001/ox --newer-only --cask
+for type in cask formula; do
+    brew livecheck --tap jat001/ox --newer-only --$type
 
-brew livecheck --tap jat001/ox --newer-only --json --quiet --cask |
-        jq -c '.[]' | while read -r cask; do
-    name="$(jq -r '.cask' <<<"$cask")"
-    version="$(jq -r '.version.latest' <<<"$cask")"
+    brew livecheck --tap jat001/ox --newer-only --json --quiet --$type |
+            jq -c '.[]' | while read -r line; do
+        name="$(jq -r ".$type" <<<"$line")"
+        version="$(jq -r '.version.latest' <<<"$line")"
 
-    brew bump-cask-pr --write-only --commit --version "$version" "jat001/ox/$name"
+        brew bump-$type-pr --write-only --commit --version "$version" "jat001/ox/$name"
+    done
 done
 
 [ "$PUSH" -gt 0 ] && git push origin master
