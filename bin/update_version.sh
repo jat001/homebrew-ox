@@ -29,12 +29,14 @@ while :; do
     shift
 done
 
+brew livecheck --tap jat001/ox --newer-only --cask
+
 brew livecheck --tap jat001/ox --newer-only --json --quiet --cask |
         jq -c '.[]' | while read -r cask; do
     name="$(jq -r '.cask' <<<"$cask")"
     version="$(jq -r '.version.latest' <<<"$cask")"
 
-    brew bump-cask-pr --write-only --commit --version "$version" "$name"
+    brew bump-cask-pr --write-only --commit --version "$version" "jat001/ox/$name"
 done
 
 [ "$PUSH" -gt 0 ] && git push origin master
