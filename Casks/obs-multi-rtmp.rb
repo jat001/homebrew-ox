@@ -14,6 +14,15 @@ cask "obs-multi-rtmp" do
 
   pkg "obs-multi-rtmp-#{version}-macos-universal.pkg"
 
+  postflight do
+    dir = "/Library/Application Support/obs-studio"
+    src = "#{dir}/plugins"
+    desc = Dir.home + dir
+
+    FileUtils.mkdir_p(desc)
+    FileUtils.ln_sf(src, desc)
+  end
+
   uninstall pkgutil: [
     "'net.sorayuki.obs-multi-rtmp'",
   ]
