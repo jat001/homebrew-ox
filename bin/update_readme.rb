@@ -6,6 +6,8 @@ require 'naturally'
 require 'optparse'
 require 'sorbet-runtime'
 
+HOMEBREW_PREFIX = T.let(`brew --prefix`.strip, String)
+
 # DSL
 class Cask
   extend T::Sig

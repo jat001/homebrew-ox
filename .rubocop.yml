@@ -1,21 +1,10 @@
 require:
   - rubocop-sorbet
 
-Naming/FileName:
+AllCops:
   Exclude:
     - "Casks/*"
-
-Sorbet/FalseSigil:
-  Exclude:
-    - "Casks/*"
-
-Style/FrozenStringLiteralComment:
-  Exclude:
-    - "Casks/*"
-
-Style/StringLiterals:
-  Exclude:
-    - "Casks/*"
+    - "Formula/*"
 
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: comma
