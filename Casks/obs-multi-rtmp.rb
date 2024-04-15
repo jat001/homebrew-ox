@@ -1,8 +1,8 @@
 cask "obs-multi-rtmp" do
-  version "0.5.0.4"
-  sha256 "2762212ea72aa0fccde013249332d0b738864cb5ed9d1626548c4dd7f9b9b4bd"
+  version "0.6.0.1"
+  sha256 "efedfa2da7ad5de029c34296df3aab198924da5ee01d0e26faaa44bb43db64a0"
 
-  url "https://github.com/sorayuki/obs-multi-rtmp/releases/download/#{version}-flatpak/obs-multi-rtmp-#{version}-macos-universal.pkg"
+  url "https://github.com/sorayuki/obs-multi-rtmp/releases/download/#{version}/obs-multi-rtmp-0.6.0.0-macos-universal.pkg"
   name "obs-multi-rtmp"
   desc "Multiple RTMP outputs plugin for OBS Studio"
   homepage "https://github.com/sorayuki/obs-multi-rtmp"
@@ -12,7 +12,7 @@ cask "obs-multi-rtmp" do
     strategy :github_latest
   end
 
-  pkg "obs-multi-rtmp-#{version}-macos-universal.pkg"
+  pkg "obs-multi-rtmp-0.6.0.0-macos-universal.pkg"
 
   # The pkg installs the plugin files to /Library/Application Support/obs-studio/plugins
   # however OBS Studio expects them to be in ~/Library/Application Support/obs-studio/plugins
