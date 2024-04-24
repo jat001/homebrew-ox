@@ -27,9 +27,9 @@ jobs:
 
       - name: Move repo
         run: |
-          mkdir -p /usr/local/Homebrew/Library/Taps/jat001
-          mv "$GITHUB_WORKSPACE" /usr/local/Homebrew/Library/Taps/jat001/homebrew-ox
-          ln -s /usr/local/Homebrew/Library/Taps/jat001/homebrew-ox "$GITHUB_WORKSPACE"
+          mkdir -p /opt/homebrew/Library/Taps/jat001
+          mv "$GITHUB_WORKSPACE" /opt/homebrew/Library/Taps/jat001/homebrew-ox
+          ln -s /opt/homebrew/Library/Taps/jat001/homebrew-ox "$GITHUB_WORKSPACE"
 
       - name: Update version
         run: |
