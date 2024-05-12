@@ -39,5 +39,22 @@ cask "corplink" do
 
   auto_updates true
 
-  uninstall pkgutil: []
+  uninstall_preflight do
+    system("chflags", "noschg", "/Applications/CorpLink.app", "/usr/local/corplink")
+  end
+
+  uninstall pkgutil: [
+    "com.volcengine.corplink.flcloudprint.installer",
+    "com.volcengine.corplink.installer",
+  ]
+
+  zap trash: [
+    "/usr/local/corplink",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.volcengine.corplink.networkextension-wrapper.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.volcengine.corplink.sfl*",
+    "~/Library/Application Support/CorpLink",
+    "~/Library/Logs/CorpLink",
+    "~/Library/Preferences/com.volcengine.corplink.plist",
+    "~/Library/Saved Application State/com.volcengine.corplink.savedState",
+  ]
 end
