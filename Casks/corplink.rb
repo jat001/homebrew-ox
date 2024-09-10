@@ -1,10 +1,10 @@
 cask "corplink" do
-  version "2.2.18"
-  sha256 arm:   "b06300598f22f8845c348ab3f52999796771f1d596aaae179c7dccea3c91f51c",
-         intel: "ae320b86a68e3befd1b744c2866c539b5be2d688a1c2288677ba694e5e207020"
+  version "2.2.25"
+  sha256 arm:   "e1f2930e582b7fac980dd6d17c7a5ecd1de68f6f2b432aeb5d7dd908144bf3db",
+         intel: "29f5463e9addea0f83d6d933ab5b8fbda9510a8d128f9f6a026b963ca34cf8df"
 
   on_arm do
-    rel = "r5059_eb3456"
+    rel = "r5814_c9bcdc"
 
     url "https://cdn.isealsuite.com/mac/FeiLian_Mac_arm64_v#{version}_#{rel}.pkg",
         verified: "cdn.isealsuite.com"
@@ -12,7 +12,7 @@ cask "corplink" do
     pkg "FeiLian_Mac_arm64_v#{version}_#{rel}.pkg"
   end
   on_intel do
-    rel = "r5059_45c5ed"
+    rel = "r5814_e574da"
 
     url "https://cdn.isealsuite.com/mac/FeiLian_Mac_x64_v#{version}_#{rel}.pkg",
         verified: "cdn.isealsuite.com"
