@@ -1,9 +1,9 @@
 cask "archi-steam-farm-bin" do
   arch arm: "arm64", intel: "x64"
 
-  version "6.0.8.7"
-  sha256 arm:   "45dd5a6cc428a6ed61d27eb606eb4235713316af71e89d364f3c7efc38252cbf",
-         intel: "5fcfe7c2c52764281ea8ce9b722559b2f64f2986ed123a9b2b22ed67cb9cd1ea"
+  version "6.1.0.1"
+  sha256 arm:   "fa2f4bd5687d9ef1a008588d437cceb539c81d7d0206fdf34f947787bede6727",
+         intel: "3fce07ad3e22839b893df78cea490a3b5c3e41d5b0c4423b4b967068bbd348a8"
 
   url "https://github.com/JustArchiNET/ArchiSteamFarm/releases/download/#{version}/ASF-osx-#{arch}.zip"
   name "ASF"
