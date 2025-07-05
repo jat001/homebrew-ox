@@ -1,8 +1,8 @@
 cask "obs-multi-rtmp" do
-  version "0.6.0.1"
-  sha256 "efedfa2da7ad5de029c34296df3aab198924da5ee01d0e26faaa44bb43db64a0"
+  version "0.7.2"
+  sha256 "d0232233886284ead40f8cf70a3eca83b0a6ceadb7075fe21a9330fd8cea6e46"
 
-  url "https://github.com/sorayuki/obs-multi-rtmp/releases/download/#{version}/obs-multi-rtmp-0.6.0.0-macos-universal.pkg"
+  url "https://github.com/sorayuki/obs-multi-rtmp/releases/download/#{version}/obs-multi-rtmp-#{version}.0-macos-universal.pkg"
   name "obs-multi-rtmp"
   desc "Multiple RTMP outputs plugin for OBS Studio"
   homepage "https://github.com/sorayuki/obs-multi-rtmp"
@@ -33,7 +33,5 @@ cask "obs-multi-rtmp" do
     File.unlink("#{target}/obs-multi-rtmp.plugin")
   end
 
-  uninstall pkgutil: [
-    "'net.sorayuki.obs-multi-rtmp'",
-  ]
+  uninstall pkgutil: "'net.sorayuki.obs-multi-rtmp'"
 end
