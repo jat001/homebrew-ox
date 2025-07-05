@@ -12,7 +12,7 @@ cask "obs-multi-rtmp" do
     strategy :github_latest
   end
 
-  pkg "obs-multi-rtmp-0.6.0.0-macos-universal.pkg"
+  pkg "obs-multi-rtmp-#{version}.0-macos-universal.pkg"
 
   # The pkg installs the plugin files to /Library/Application Support/obs-studio/plugins
   # however OBS Studio expects them to be in ~/Library/Application Support/obs-studio/plugins
